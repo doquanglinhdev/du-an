@@ -10,9 +10,13 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        // $tableNo = $_GET['tableNo'];
+        $tableNo = $request->input('tableNo');
+        return view('client.menu', ['tableNo' => $tableNo]);
+
     }
 
     /**
